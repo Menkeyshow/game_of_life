@@ -4,16 +4,7 @@ import time
 
 
 if __name__ == "__main__":
-    game_logic = board_logic(board_state=  [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                            [0, 0, 1, 1, 1, 0, 0, 0, 0, 0]])
+    game_logic = board_logic(board_size=(15,15))
     game_gui = gui(game_logic.board_state)
 
     #TODO: use events and eventlisteners!
