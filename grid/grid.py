@@ -1,17 +1,17 @@
 import numpy as np
-class game_grid(object):
+class grid(object):
     def __init__(self, size=10, wrap_around=True, state=None):
         self.size = (size,size)
         self.wrap_around = wrap_around
 
         if(state is None):
-            self.grid = np.zeros(self.size, dtype=int)
+            self.set_state(np.zeros(self.size, dtype=int))
         else:
             self.set_state(state)
 
     def set_state(self, state):
         """
-        Edits an game_grid object with given state.
+        Edits an grid object with given state.
         Must be of the same size.
         """
         if(np.shape(state) == self.size):
@@ -94,9 +94,9 @@ class game_grid(object):
 
 
 if __name__ == "__main__":
-    game = game_grid()
+    game = grid()
     print(game.grid)
-    game2 = game_grid(
+    game2 = grid(
             state= [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
@@ -111,7 +111,7 @@ if __name__ == "__main__":
     game2.next_state_of_grid()
     print(game2.grid)
     def faulty_state():
-        game2 = game_grid(
+        game2 = grid(
             state= [[1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
