@@ -1,8 +1,11 @@
-from game_logic.board_logic import board_logic
-from gui.gui import gui
-import time, sys
+import time, sys, os
+from .game_logic.board_logic import board_logic
+from .gui.gui import gui
 
-def run():
+__version__ = "0.0.1"
+
+
+def start_game():
     "Starts a game"
     game_logic = board_logic(board_size=(15,15))
     game_gui = gui(game_logic.board_state)
@@ -25,4 +28,4 @@ def run():
             #time.sleep(0.1)
             
 if __name__ == "__main__":
-    run()
+    start_game()
