@@ -27,7 +27,7 @@ class gui(object):
         self.master.pack()
 
         # Buttons
-        self.auto_update_button = tk.Button(self.root, text="Let Life flow", 
+        self.auto_update_button = tk.Button(self.root, text="Start", 
                                         command=(lambda:self.auto_update_toggle()))
         self.auto_update_button.pack()
         self.initialize_cell_buttons()
@@ -91,6 +91,11 @@ class gui(object):
         """ Decide to auto update cells, or not.
         """
         self.auto_update_state = not self.auto_update_state
+        if self.auto_update_state:
+            self.auto_update_button.config(text="Pause")
+        else:
+            self.auto_update_button.config(text="Start")
+
 
 if __name__ == "__main__":
     game_gui = gui(board_state=[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
