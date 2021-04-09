@@ -13,3 +13,6 @@ After marking the status (alive/dead) of the cells, the programm simulates the l
 
 
 ![](https://i.imgur.com/HLyO5s1.png)
+___
+Install via:
+```pip install menekyshow.conway```
